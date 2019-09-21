@@ -11,7 +11,7 @@ We will cover the basics of interacting with, and programming the hardware and s
 [IOT Central Documentation](https://docs.microsoft.com/en-us/azure/iot-central/)
 
 ### MXChip Pinouts
-![mxchip_pinouts](./.images/mxchip_pinouts.png)
+![mxchip_pinouts](.images/mxchip_pinouts.png)
 
 [pinout source](https://github.com/peterblazejewicz/az3166-mxchip-iot-devkit-pinout)
 
@@ -31,7 +31,7 @@ To install and configure your system you need the following software installed:
 ![](https://docs.microsoft.com/en-us/azure/iot-hub/media/iot-hub-arduino-devkit-az3166-get-started/getting-started/install-azure-iot-tools.png)
 1. Configure VSCode Settings:
 In VSCode, click File > Preferences > Settings and then search for "Arduino"
-![arduino_settings.PNG](./.images/arduino_settings.PNG)
+![arduino_settings.PNG](.images/arduino_settings.PNG)
 1.1 For **Arduino.Path** enter the install location of the **Arduino IDE**
 1.2 Then select "Edit in settings.json" under the "Additional Paths". This will open up JSON settings. Make sure that the path to the mxchip board definitions are included. It should look something like this:
 ```
@@ -42,9 +42,9 @@ In VSCode, click File > Preferences > Settings and then search for "Arduino"
 ```
 1.3 Close and re-open VSCode
 1.4 Press "F1" and select "Arduino: Board Manager"
-![arduino_bardmanager.PNG](./.images/arduino_boardmanager.PNG)
+![arduino_bardmanager.PNG](.images/arduino_boardmanager.PNG)
 1.5 Search for "az" and then select to install the latest version of **MXChip - Microsoft Azure IoT developer Kit**
-![arduino_boardmanager_setting.PNG](./.images/arduino_boardmanager_setting.PNG)
+![arduino_boardmanager_setting.PNG](.images/arduino_boardmanager_setting.PNG)
 
 
 ## Hands on Lab 1
@@ -89,6 +89,6 @@ void loop(){
 ```
 4. Plug the MXCHip board using the USB cable into a USB port on your PC
 5. You should notice a VSCode recognises it and brings up an information / sample page
-6. Click the "Compile" button (you will find it on the top left of VSCode, the button with the small check mark on it ![vscode_compile.PNG](./.images/vscode_compile.PNG) )
+6. Click the "Compile" button (you will find it on the top left of VSCode, the button with the small check mark on it ![vscode_compile.PNG](.images/vscode_compile.PNG) )
 7. In the output window you will notice a compile has started. It should complete without any issues
-8. When it has completed successfully, press the upload button (![arduino_upload.PNG](./.images/vscode_upload.PNG) ) to deploy the code to the device. You should notice, when the upload has completed the RGB Led starts flashing different colours
+8. When it has completed successfully, press the upload button (![arduino_upload.PNG](.images/vscode_upload.PNG) ) to deploy the code to the device. You should notice, when the upload has completed the RGB Led starts flashing different colours
