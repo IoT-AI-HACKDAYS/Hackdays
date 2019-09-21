@@ -41,7 +41,7 @@ In VSCode, click File > Preferences > Settings and then search for "Arduino"
       ],
       ```
    - Close and re-open VSCode
-7. Press "F1" and select "Arduino: Board Manager"
+7. Press "F1" and select "Arduino: Board Manager"  
    ![arduino_bardmanager.PNG](.images/arduino_boardmanager.PNG)
    - Search for "az" and then select to install the latest version of **MXChip - Microsoft Azure IoT developer Kit**
      ![arduino_boardmanager_setting.PNG](.images/arduino_boardmanager_setting.PNG)
