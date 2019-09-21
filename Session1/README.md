@@ -6,9 +6,9 @@ This session we will introduce teh world of IoT through the Arduino, using the M
 We will cover the basics of interacting with, and programming the hardware and some basics around Azure and IoT Central.
 
 ## Information about the MXCHIP
-[MXChip in SA](https://za.rs-online.com/web/p/radio-frequency-development-kits/1845096/)
-[MXChip Documentation](https://microsoft.github.io/azure-iot-developer-kit/docs/projects/)
-[IOT Central Documentation](https://docs.microsoft.com/en-us/azure/iot-central/)
+- [MXChip in SA](https://za.rs-online.com/web/p/radio-frequency-development-kits/1845096/)
+- [MXChip Documentation](https://microsoft.github.io/azure-iot-developer-kit/docs/projects/)
+- [IOT Central Documentation](https://docs.microsoft.com/en-us/azure/iot-central/)
 
 ### MXChip Pinouts
 ![mxchip_pinouts](.images/mxchip_pinouts.png)
