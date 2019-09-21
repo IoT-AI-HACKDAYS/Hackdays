@@ -37,7 +37,7 @@ In VSCode, click File > Preferences > Settings and then search for "Arduino"
       ```
       "arduino.path": "C:\\Program Files (x86)\\Arduino",
       "arduino.additionalUrls": [
-           https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+           "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
       ],
       ```
    - Close and re-open VSCode
