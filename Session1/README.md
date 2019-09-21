@@ -32,18 +32,18 @@ To install and configure your system you need the following software installed:
 1. Configure VSCode Settings:
 In VSCode, click File > Preferences > Settings and then search for "Arduino"
 ![arduino_settings.PNG](.images/arduino_settings.PNG)
-1.1 For **Arduino.Path** enter the install location of the **Arduino IDE**
-1.2 Then select "Edit in settings.json" under the "Additional Paths". This will open up JSON settings. Make sure that the path to the mxchip board definitions are included. It should look something like this:
+1. For **Arduino.Path** enter the install location of the **Arduino IDE**
+1. Then select "Edit in settings.json" under the "Additional Paths". This will open up JSON settings. Make sure that the path to the mxchip board definitions are included. It should look something like this:
 ```
 "arduino.path": "C:\\Program Files (x86)\\Arduino",
     "arduino.additionalUrls": [
 "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
     ],
 ```
-1.3 Close and re-open VSCode
-1.4 Press "F1" and select "Arduino: Board Manager"
+1. Close and re-open VSCode
+1. Press "F1" and select "Arduino: Board Manager"
 ![arduino_bardmanager.PNG](.images/arduino_boardmanager.PNG)
-1.5 Search for "az" and then select to install the latest version of **MXChip - Microsoft Azure IoT developer Kit**
+1. Search for "az" and then select to install the latest version of **MXChip - Microsoft Azure IoT developer Kit**
 ![arduino_boardmanager_setting.PNG](.images/arduino_boardmanager_setting.PNG)
 
 
