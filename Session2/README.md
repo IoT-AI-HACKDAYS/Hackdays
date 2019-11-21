@@ -41,14 +41,16 @@ Take note to **Enable** the Admin user and select **Basic** pricing SKU
 ### Create the computer vision model
 1. Log into [Computer Vision](https://www.customvision.ai/) site with the same credentials as your Azure account
 2. Create a new project setting the values accordingly
-   |Property|Value|
-   |----|----|
-   |Name | enter a name for your project
-   |Resource | Select **create new** and create a new resurce in your Azure account putting it in the same resource group as you IoT hub |
-   |Project Type | Classification
-   |Classification Type | Multiclass ( Single tag per image)
-   |Domain | General (compact)
-   |Export Capability | Basic platforms
+
+|Property|Value|
+|----|----|
+|Name | Enter a name for your project
+|Resource | Select **create new** and create a new resurce in your Azure account putting it in the same resource group as you IoT hub |
+|Project Type | Classification
+|Classification Type | Multiclass ( Single tag per image)
+|Domain | General (compact)
+|Export Capability | Basic platforms
+
 3. When the project is created, add the following **Tags** by selecting the "Plus" on the left hand side of the "Train Images" page:
    - Reverse
    - Forward
@@ -65,11 +67,13 @@ _Note you need at least 5 images for each tag._
 ### Deploy IoT Edge modules
 1. Download the supplied code and open it in VSCode
 2. The **.env** file and fill in the values accordingly:
-   |Property|Value|
-   |----|----|
-   |CONTAINER_REGISTRY_ADDRESS | Login Server Name|
-   |CONTAINER_REGISTRY_USERNAME | Admin user name|
-   |CONTAINER_REGISTRY_PASSWORD | Password |
-3. _TODO: Make any additional changes an settings_
+
+|Property|Value|
+|----|----|
+|CONTAINER_REGISTRY_ADDRESS | Login Server Name|
+|CONTAINER_REGISTRY_USERNAME | Admin user name|
+|CONTAINER_REGISTRY_PASSWORD | Password |
+
+3. _TODO @Allan : Make any additional changes and settings_
 4. Right click on the "deployment.template.json" file and select **Build and Push IoT Edge Solution**
 5. Grab some coffee
