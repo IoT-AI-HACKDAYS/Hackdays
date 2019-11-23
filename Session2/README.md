@@ -89,7 +89,7 @@ _Note you need at least 5 images for each tag._
 5. When you have sufficient images for each of the actions, select **Train** and perform a **Quick Train**
 6. On completion, evaluate the results. At this stage you can also perform a "Quick test" by uploading a picture that was not used in the training set, and see if it evaluates as expected
 7. Select **Export** and select to export a **Dockerfile**. When prompted select "ARM (Raspberry PI)" as the version and click **Export** and then **Download**
-8. Extract the downloaded file into the **ImageClassifierService** folder under the code path  
+8. Extract the downloaded file into the **ImageClassifierService** folder under the code path from the next section 
 
 ### Deploy IoT Edge modules
 1. Download the supplied code and open it in VSCode  https://github.com/IoT-AI-HACKDAYS/azureiotedgeintrobot
