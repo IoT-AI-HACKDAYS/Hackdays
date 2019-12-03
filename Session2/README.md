@@ -92,7 +92,7 @@ _Note you need at least 5 images for each tag._
 8. Extract the downloaded file into the **ImageClassifierService** folder under the code path from the next section 
 
 ### Deploy IoT Edge modules
-1. Download the supplied code and open it in VSCode  https://github.com/IoT-AI-HACKDAYS/azureiotedgeintrobot
+1. Download the code from the location that has been provided by a proctor and open it in VSCode
 2. The **.env** file and fill in the values accordingly:
 
 |Property|Value|
