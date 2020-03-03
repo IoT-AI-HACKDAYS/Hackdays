@@ -63,8 +63,6 @@ Take note to **Enable** the Admin user and select **Basic** pricing SKU
 5.   Check status of modules -  "iotedge list"  from the Raspberry Pi command via SSH      [Troubleshooting steps](https://docs.microsoft.com/en-us/azure/iot-edge/troubleshoot)
 
 
-
-
 ### Create the computer vision model
 1. Log into [Computer Vision](https://www.customvision.ai/) site with the same credentials as your Azure account
 2. Create a new project setting the values accordingly
