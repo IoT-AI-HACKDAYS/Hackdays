@@ -1,17 +1,17 @@
-# Lab 3
+# IoT Hackdays Session 3
 
 ## Overview
 Introduction to developing using an IoT Edge device and interacting with Microsoft's Azure Services. 
 This session is to get everyone up to speed with the process of interacting with more complex hardware and some basics around Azure and AI / Cognitive services but extending it to using dotnet core and interacting with the GPIO (General purpose input/output) directly.
 
-### Start
+## Start
 To start off, we will need the to make sure the pre-requisites are in place per the [previous session](../Session2/README.md#requirements).
 In addition to the pre-requisites:
   1. Create an instance of [IoT Hub](../Session2/README.md#create-a-iot-hub-instance)
   2. [Connect your bot to IoT Hub](../Session2/README.md#test-iot-runtime-on-raspberry-pi)
 
 
-### Create a model
+## Create a model
 1. Log into [Computer Vision](https://www.customvision.ai/) and create a new Object Detection project
 2. Create a new project setting the values accordingly
 
@@ -28,7 +28,7 @@ The proctors will help with the images. _Remember you need at least 15 images to
 2. Train and test
 3. When you are happy that it will detect the image appropriately, export the model from the "Performance" tab by selecting "Export" and then use the "Dockerfile" format. Select "ARM (Raspberry Pi 3)" and download
 
-### Create a new module
+## Create a new module
 1. Clone the repo from the location provided by the proctors
 2. In the root, there is a '.env' file. Open that and update the values with your Azure Container Registry settings
 3. Open the zip file and from the `app` folder copy the 'labels.txt' and 'model.pb' to the `ImageRecognition\app` folder
@@ -103,7 +103,7 @@ This will direct communication between the camera-capture module and your new co
 15. If you run `docker ps -a` you should see containers that are running as well. Wait for your controller container to show in the list, and then type `sudo iotedge logs controller`. You should see the json predictions on images captured by the camera and then passed to your ImageRecognition object detection model, relayed back to your new dotnet based controller
 16. Now you can start coding to have the bot search the image that the model was trained on
 
-### Controlling the bot
+## Controlling the bot
 1. Drop down to the terminal and navigate to the location that the `controller` dotnet core project is located. Add the GPIO and Devices library by running the following commands:
 ```cmd
 dotnet add package System.Device.Gpio --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json
