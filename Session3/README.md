@@ -2,7 +2,7 @@
 
 ## Overview
 Introduction to developing using an IoT Edge device and interacting with Microsoft's Azure Services. 
-This session is to get everyone up to speed with the process of interacting with more complex hardware and some basics around Azure and AI / Cognitive services but exetnding it to using dotnet core and interacting with the GPIO (General purpose input/output) directly.
+This session is to get everyone up to speed with the process of interacting with more complex hardware and some basics around Azure and AI / Cognitive services but extending it to using dotnet core and interacting with the GPIO (General purpose input/output) directly.
 
 ### Start
 To start off, we will need the to make sure the pre-requisites are in place per the [previous session](../Session2/README.md#requirements).
@@ -18,7 +18,7 @@ In addition to the pre-requisites:
 |Property	| Value|
 |----|----|
 |Name |	Enter a name for your project
-|Resource|	Select create new and create a new resurce in your Azure account putting it in the same resource group as you IoT hub |
+|Resource|	Select create new and create a new resource in your Azure account putting it in the same resource group as you IoT hub |
 |Project Type	| Object Detection |
 |Domain |	General (compact) |
 |Export Capability | Basic platforms |
@@ -26,7 +26,7 @@ In addition to the pre-requisites:
 The proctors will help with the images. _Remember you need at least 15 images to train the model_
 
 2. Train and test
-3. When you are happy that it will detect the image appropriately, export the model from the "Preformance" tab by selecting "Export" and then use the "Dockerfile" format. Select "ARM (Raspberry Pi 3)" and download
+3. When you are happy that it will detect the image appropriately, export the model from the "Performance" tab by selecting "Export" and then use the "Dockerfile" format. Select "ARM (Raspberry Pi 3)" and download
 
 ### Create a new module
 1. Clone the repo from the location provided by the proctors
@@ -98,7 +98,7 @@ This will direct communication between the camera-capture module and your new co
 12. Right click on the `deployment.template.json` file and select 'Build and Push to IoT Edge Solution'. _This may take a while, so feel free to help someone around you 🙂_
 13. When that has completed, open up the 'config' folder in vscode, there should be a 'deployment.amd64.json' file in it. Right click on the file and select 'Create Deployment for Single Device', then select your Raspberry's device twin in the dropdown
 13. Using Putty or another ssh client, connect to your Raspberry Pi
-14. Type ` sudo iotedge logs edgeAgent --tail 10` to see if your Pi is updateing
+14. Type ` sudo iotedge logs edgeAgent --tail 10` to see if your Pi is updating
 15. if you run `docker ps -a` you should see containers that are running as well. Wait for your controller container to show in the list, and then type `sudo iotedge logs controller`. You should see the json predictions on images captured by the camera and then passed to your ImageRecognition object detection model, relayed back to your new dotnet based controller
 16. Now you can start coding to have the bot search the image that the model was trained on
 
@@ -114,8 +114,8 @@ dotnet add package Iot.Device.Bindings --source https://pkgs.dev.azure.com/dncen
 
 
 
-```
-Notes:
-If you receive and error `Unhandled exception. System.IO.IOException: Error 13 initializing the Gpio driver.` from the controller module. Run `sudo chmod 777 /dev/gpiomem` on your Pi
-```
+
+> Notes: <br/>
+> If you receive and error `Unhandled exception. System.IO.IOException: Error 13 initializing the Gpio driver` from the controller module. Run `sudo chmod 777 /dev/gpiomem` on your Pi
+
 
