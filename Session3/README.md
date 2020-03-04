@@ -87,19 +87,20 @@ The proctors will help with the images. _Remember you need at least 15 images to
 } 
 ```
 This will allow the new container to access the GPIO of the Raspberry Pi
+
 11. A bit further down, find the `routes` section and replace the contents with 
 ```json
 "CameraCaptureToController": "FROM /messages/modules/camera-capture/outputs/output1 INTO BrokeredEndpoint(\"/modules/controller/inputs/input1\")"
 ```
 This will direct communication between the camera-capture module and your new controller module
 
-12. Open the controller folder, and then the "Dockerfile.arm32v7" file. Change the base images to "mcr.microsoft.com/dotnet/core/sdk:3.0-buster" for the _build-env_ and "mcr.microsoft.com/dotnet/core/runtime:3.0-buster-slim-arm32v7". Then open the `controller.csproj` file and change the 'TargetFarmework' to 'netcoreapp3.1' 
+12. Open the controller folder, and then the "Dockerfile.arm32v7" file. Change the base images to "mcr.microsoft.com/dotnet/core/sdk:3.0-buster" for the _build-env_ and "mcr.microsoft.com/dotnet/core/runtime:3.0-buster-slim-arm32v7". Finally open the `controller.csproj` file and change the 'TargetFarmework' to 'netcoreapp3.1' 
  
 12. Right click on the `deployment.template.json` file and select 'Build and Push to IoT Edge Solution'. _This may take a while, so feel free to help someone around you 🙂_
 13. When that has completed, open up the 'config' folder in vscode, there should be a 'deployment.amd64.json' file in it. Right click on the file and select 'Create Deployment for Single Device', then select your Raspberry's device twin in the dropdown
-13. Using Putty or another ssh client, connect to your Raspberry Pi
+13. Using [Putty](https://putty.org/) or another ssh client, connect to your Raspberry Pi
 14. Type ` sudo iotedge logs edgeAgent --tail 10` to see if your Pi is updating
-15. if you run `docker ps -a` you should see containers that are running as well. Wait for your controller container to show in the list, and then type `sudo iotedge logs controller`. You should see the json predictions on images captured by the camera and then passed to your ImageRecognition object detection model, relayed back to your new dotnet based controller
+15. If you run `docker ps -a` you should see containers that are running as well. Wait for your controller container to show in the list, and then type `sudo iotedge logs controller`. You should see the json predictions on images captured by the camera and then passed to your ImageRecognition object detection model, relayed back to your new dotnet based controller
 16. Now you can start coding to have the bot search the image that the model was trained on
 
 ### Controlling the bot
@@ -116,6 +117,7 @@ dotnet add package Iot.Device.Bindings --source https://pkgs.dev.azure.com/dncen
 
 
 > Notes: <br/>
-> If you receive and error `Unhandled exception. System.IO.IOException: Error 13 initializing the Gpio driver` from the controller module. Run `sudo chmod 777 /dev/gpiomem` on your Pi
+> * To do an update on your container and have it filter through in a manner that you can monitor, update the version in the ` "version": "0.0.1",` tag before you build and push the image. This is located in the `module.json` file which is in the "controller" directory
+> * If you receive and error `Unhandled exception. System.IO.IOException: Error 13 initializing the Gpio driver` from the controller module. Run `sudo chmod 777 /dev/gpiomem` on your Pi
 
 
