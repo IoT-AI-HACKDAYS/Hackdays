@@ -87,7 +87,6 @@ The proctors will help with the images. _Remember you need at least 15 images to
 } 
 ```
 This will allow the new container to access the GPIO of the Raspberry Pi
-
 11. A bit further down, find the `routes` section and replace the contents with 
 ```json
 "CameraCaptureToController": "FROM /messages/modules/camera-capture/outputs/output1 INTO BrokeredEndpoint(\"/modules/controller/inputs/input1\")"
