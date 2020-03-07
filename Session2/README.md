@@ -56,11 +56,12 @@ Take note to **Enable** the Admin user and select **Basic** pricing SKU
 ### Test IoT Runtime on Raspberry Pi
 
 1.  Configure **config.yaml** on the Raspberry Pi.   sudo nano /etc/iotedge/config.yaml
-2.   Add previously noted **connection string**  for IoT Edge Device in **config.yaml**
+2.  Find the **hostname** setting and make sure that it reflects the name of the Raspberry Pi you are working on
+3.  Find the **device_connection_string** and replace the contents with the previoulsy copied connection string from IoT Edge
 ![](.images/configyaml.png)
-3.  Save file in **Nano** using ctrl-X (Yes to any questions)
-4.   Restart IoT Runtime -  "sudo systemctl restart iotedge"
-5.   Check status of modules -  "iotedge list"  from the Raspberry Pi command via SSH      [Troubleshooting steps](https://docs.microsoft.com/en-us/azure/iot-edge/troubleshoot)
+4.  Save file in **Nano** using ctrl-X (Yes to any questions)
+5.  Restart IoT Runtime -  "sudo systemctl restart iotedge"
+6.  Check status of modules -  "iotedge list"  from the Raspberry Pi command via SSH      [Troubleshooting steps](https://docs.microsoft.com/en-us/azure/iot-edge/troubleshoot)
 
 
 ### Create the computer vision model
