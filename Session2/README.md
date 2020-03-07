@@ -36,7 +36,7 @@ To install and configure your system you need the following:
 1. Login to your Azure Portal and create a resource group
 2. Create a new IoT Hub
 ![](.images/IoTHub.png)
-Follow the steps, by selecting the subscription and giving it a unique name. On the next blade, under "Pricing and scale tier" select "Standard" and create your new IoT Hub
+Follow the steps, by selecting the subscription and giving it a unique name. On the next blade, under "Pricing and scale tier" select the "Free" tier and create your new IoT Hub
 3. Create a new Azure Container Registry (ACR)
 ![](.images/acr.png)
 Take note to **Enable** the Admin user and select **Basic** pricing SKU
