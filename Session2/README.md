@@ -32,13 +32,6 @@ To install and configure your system you need the following:
 
 ## Labs
 
-## Testing your Bot 
-
-1.  Plug in the provided Raspberry Pi
-2.  SSH (using Putty or Visual Studio Code) in Raspberry Pi.   Use the host name provided with the pi.  (user name and password to be provided)
-3.  In the /home/pi/Alphabot2/python folder, run the Joystick.py app to test your bot.  (python Joystick.py)
-
-
 ### Create a IoT Hub instance
 1. Login to your Azure Portal and create a resource group
 2. Create a new IoT Hub
@@ -52,6 +45,12 @@ Take note to **Enable** the Admin user and select **Basic** pricing SKU
 ![](.images/addedgedevice.png)
 6.  Take note of the **connection string** of the device
 ![](.images/managedevicekeys.png)
+
+## Testing your Bot 
+
+1.  Plug in the provided Raspberry Pi
+2.  SSH (using Putty or Visual Studio Code) in Raspberry Pi.   Use the host name provided with the pi.  (user name and password to be provided)
+3.  In the /home/pi/Alphabot2/python folder, run the Joystick.py app to test your bot.  (python Joystick.py)
 
 ### Test IoT Runtime on Raspberry Pi
 
